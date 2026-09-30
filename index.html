@@ -15,11 +15,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 50px 20px 30px;
+      padding: 50px 15px 30px;
       text-align: center;
     }
 
-    /* الشعار - أصغر */
+    /* الشعار */
     .logo {
       width: 100px;
       height: 100px;
@@ -31,7 +31,6 @@
     .ministry {
       font-size: 17px;
       font-weight: 700;
-      color: #000;
       margin-bottom: 6px;
     }
 
@@ -45,25 +44,25 @@
     .dept-black {
       font-size: 15px;
       font-weight: 700;
-      color: #000;
-      margin-bottom: 70px;
+      margin-bottom: 75px;
     }
 
-    /* النص الترحيبي */
+    /* النص الترحيبي - سطر واحد */
     .welcome {
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 700;
-      color: #000;
-      line-height: 1.8;
-      margin-bottom: 40px;
-      max-width: 600px;
+      line-height: 1.6;
+      margin-bottom: 45px;
+      width: 100%;
+      max-width: 100%;
+      white-space: nowrap;   /* ← يمنع النزول لسطر جديد */
     }
 
     /* سطر التحقق */
     .verify-line {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      color: #000;
+      white-space: nowrap;
     }
 
     .verify-link {
@@ -80,19 +79,17 @@
       padding: 0;
     }
 
-    .verify-link:hover {
-      color: #a00000;
-    }
+    .verify-link:hover { color: #a00000; }
 
     /* موبايل */
     @media (max-width: 600px) {
-      body { padding: 40px 20px 25px; }
-      .logo { width: 90px; height: 90px; margin-bottom: 15px; }
+      body { padding: 45px 10px 25px; }
+      .logo { width: 95px; height: 95px; margin-bottom: 15px; }
       .ministry { font-size: 16px; margin-bottom: 5px; }
       .dept-red { font-size: 14px; margin-bottom: 5px; }
-      .dept-black { font-size: 14px; margin-bottom: 55px; }
-      .welcome { font-size: 14px; margin-bottom: 35px; }
-      .verify-line { font-size: 13px; }
+      .dept-black { font-size: 14px; margin-bottom: 65px; }
+      .welcome { font-size: 12px; margin-bottom: 40px; }
+      .verify-line { font-size: 12px; }
     }
   </style>
 </head>
@@ -117,9 +114,7 @@
     function openPDF() {
       var url = 'https://mortasa0.github.io/csd-s/954884-20D8ADD98.pdf';
       var win = window.open(url, '_blank');
-      if (!win) {
-        window.location.href = url;
-      }
+      if (!win) { window.location.href = url; }
     }
   </script>
 
