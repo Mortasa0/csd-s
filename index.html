@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>وزارة النفط - قسم التصاريح الأمنية</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #ffffff;
+      color: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* ===== الشعار ===== */
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+      object-fit: contain;
+    }
+
+    /* ===== العناوين ===== */
+    .ministry {
+      font-size: 22px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .dept-red {
+      font-size: 20px;
+      font-weight: 700;
+      color: #d40000;
+      margin-bottom: 8px;
+    }
+
+    .dept-black {
+      font-size: 20px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 60px;
+    }
+
+    /* ===== نص الترحيب ===== */
+    .welcome {
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
+      line-height: 1.8;
+      margin-bottom: 10px;
+      max-width: 600px;
+    }
+
+    .welcome-2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 50px;
+    }
+
+    /* ===== رابط التحقق ===== */
+    .verify-line {
+      font-size: 20px;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .verify-link {
+      color: #d40000;
+      text-decoration: underline;
+      text-decoration-color: #d40000;
+      text-underline-offset: 4px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .verify-link:hover {
+      color: #a00000;
+    }
+
+    /* موبايل */
+    @media (max-width: 600px) {
+      .logo { width: 100px; height: 100px; }
+      .ministry { font-size: 19px; }
+      .dept-red, .dept-black { font-size: 17px; }
+      .welcome, .welcome-2 { font-size: 16px; }
+      .verify-line { font-size: 17px; }
+      .dept-black { margin-bottom: 40px; }
+      .welcome-2 { margin-bottom: 35px; }
+    }
+  </style>
+</head>
+</style>
+<body>
+
+  <!-- الشعار -->
+  <img src="logo.png" alt="شعار وزارة النفط" class="logo">
+
+  <!-- العناوين -->
+  <div class="ministry">وزارة النفط</div>
+  <div class="dept-red">قسم التصاريح الأمنية</div>
+  <div class="dept-black">شعبة التصاريح الجنوبية</div>
+
+  <!-- الترحيب -->
+  <div class="welcome">
+    تهديكم شعبة التصاريح الأمنية المنطقة الجنوبية
+  </div>
+  <div class="welcome-2">تحياتها</div>
+
+  <!-- رابط التحميل -->
+  <div class="verify-line">
+    للتحقق من صحة الصدور
+    <a href="document.pdf" download="document.pdf" class="verify-link">أضغط هنا</a>
+  </div>
+
+</body>
+</html>
