@@ -7,6 +7,8 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    html, body { overflow-x: hidden; }
+
     body {
       font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
       background: #ffffff;
@@ -15,7 +17,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 50px 15px 30px;
+      padding: 50px 10px 25px;
       text-align: center;
     }
 
@@ -52,13 +54,11 @@
       font-size: 13px;
       font-weight: 700;
       line-height: 1.6;
-      margin-bottom: 45px;
-      width: 100%;
-      max-width: 100%;
-      white-space: nowrap;   /* ← يمنع النزول لسطر جديد */
+      margin-bottom: 15px;   /* ← كان 45px → صار 15px */
+      white-space: nowrap;
     }
 
-    /* سطر التحقق */
+    /* سطر التحقق - سطر واحد */
     .verify-line {
       font-size: 13px;
       font-weight: 700;
@@ -83,12 +83,12 @@
 
     /* موبايل */
     @media (max-width: 600px) {
-      body { padding: 45px 10px 25px; }
-      .logo { width: 95px; height: 95px; margin-bottom: 15px; }
+      body { padding: 45px 8px 20px; }
+      .logo { width: 90px; height: 90px; margin-bottom: 15px; }
       .ministry { font-size: 16px; margin-bottom: 5px; }
       .dept-red { font-size: 14px; margin-bottom: 5px; }
       .dept-black { font-size: 14px; margin-bottom: 65px; }
-      .welcome { font-size: 12px; margin-bottom: 40px; }
+      .welcome { font-size: 12px; margin-bottom: 12px; }   /* ← كان 40px */
       .verify-line { font-size: 12px; }
     }
   </style>
