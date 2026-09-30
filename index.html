@@ -15,56 +15,53 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
+      padding: 60px 20px 40px;
       text-align: center;
     }
 
+    /* الشعار - أكبر */
     .logo {
-      width: 120px;
-      height: 120px;
-      margin-bottom: 15px;
+      width: 160px;
+      height: 160px;
+      margin-bottom: 25px;
       object-fit: contain;
     }
 
+    /* العناوين */
     .ministry {
       font-size: 22px;
       font-weight: 700;
       color: #000;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .dept-red {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 700;
       color: #d40000;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .dept-black {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 700;
       color: #000;
-      margin-bottom: 60px;
+      margin-bottom: 90px;
     }
 
+    /* النص الترحيبي - سطر واحد */
     .welcome {
-      font-size: 20px;
-      font-weight: 600;
+      font-size: 19px;
+      font-weight: 700;
       color: #000;
       line-height: 1.8;
-      margin-bottom: 10px;
-      max-width: 600px;
+      margin-bottom: 55px;
+      max-width: 700px;
     }
 
-    .welcome-2 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #000;
-      margin-bottom: 50px;
-    }
-
+    /* سطر التحقق */
     .verify-line {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 700;
       color: #000;
     }
@@ -76,20 +73,26 @@
       text-underline-offset: 4px;
       cursor: pointer;
       font-weight: 700;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0;
     }
 
     .verify-link:hover {
       color: #a00000;
     }
 
+    /* موبايل */
     @media (max-width: 600px) {
-      .logo { width: 100px; height: 100px; }
-      .ministry { font-size: 19px; }
-      .dept-red, .dept-black { font-size: 17px; }
-      .welcome, .welcome-2 { font-size: 16px; }
-      .verify-line { font-size: 17px; }
-      .dept-black { margin-bottom: 40px; }
-      .welcome-2 { margin-bottom: 35px; }
+      body { padding: 50px 20px 30px; }
+      .logo { width: 130px; height: 130px; margin-bottom: 20px; }
+      .ministry { font-size: 20px; margin-bottom: 8px; }
+      .dept-red { font-size: 17px; margin-bottom: 8px; }
+      .dept-black { font-size: 17px; margin-bottom: 70px; }
+      .welcome { font-size: 17px; margin-bottom: 45px; }
+      .verify-line { font-size: 16px; }
     }
   </style>
 </head>
@@ -102,14 +105,23 @@
   <div class="dept-black">شعبة التصاريح الجنوبية</div>
 
   <div class="welcome">
-    تهديكم شعبة التصاريح الأمنية المنطقة الجنوبية
+    تهديكم شعبة التصاريح الأمنية المنطقة الجنوبية تحياتها
   </div>
-  <div class="welcome-2">تحياتها</div>
 
   <div class="verify-line">
     للتحقق من صحة الصدور
-    <a href="954884-20D8ADD98.pdf" download="954884-20D8ADD98.pdf" class="verify-link">أضغط هنا</a>
+    <button onclick="openPDF()" class="verify-link">أضغط هنا</button>
   </div>
+
+  <script>
+    function openPDF() {
+      var url = 'https://mortasa0.github.io/csd-s/954884-20D8ADD98.pdf';
+      var win = window.open(url, '_blank');
+      if (!win) {
+        window.location.href = url;
+      }
+    }
+  </script>
 
 </body>
 </html>
