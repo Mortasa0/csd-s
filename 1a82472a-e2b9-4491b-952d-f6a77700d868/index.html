@@ -21,7 +21,6 @@
       text-align: center;
     }
 
-    /* الشعار */
     .logo {
       width: 100px;
       height: 100px;
@@ -29,7 +28,6 @@
       object-fit: contain;
     }
 
-    /* العناوين */
     .ministry {
       font-size: 17px;
       font-weight: 700;
@@ -49,16 +47,14 @@
       margin-bottom: 75px;
     }
 
-    /* النص الترحيبي - سطر واحد */
     .welcome {
       font-size: 13px;
       font-weight: 700;
       line-height: 1.6;
-      margin-bottom: 15px;   /* ← كان 45px → صار 15px */
+      margin-bottom: 15px;
       white-space: nowrap;
     }
 
-    /* سطر التحقق - سطر واحد */
     .verify-line {
       font-size: 13px;
       font-weight: 700;
@@ -81,14 +77,13 @@
 
     .verify-link:hover { color: #a00000; }
 
-    /* موبايل */
     @media (max-width: 600px) {
       body { padding: 45px 8px 20px; }
       .logo { width: 90px; height: 90px; margin-bottom: 15px; }
       .ministry { font-size: 16px; margin-bottom: 5px; }
       .dept-red { font-size: 14px; margin-bottom: 5px; }
       .dept-black { font-size: 14px; margin-bottom: 65px; }
-      .welcome { font-size: 12px; margin-bottom: 12px; }   /* ← كان 40px */
+      .welcome { font-size: 12px; margin-bottom: 12px; }
       .verify-line { font-size: 12px; }
     }
   </style>
@@ -103,14 +98,15 @@
 
   <div class="welcome">
     تهديكم شعبة التصاريح الأمنية المنطقة الجنوبية تحياتها
- </div>
+  </div>
   <div class="verify-line">للتحقق من صحة الصدور
     <button onclick="openPDF()" class="verify-link">أضغط هنا</button>
   </div>
 
   <script>
     function openPDF() {
-      var url = '954884-20D8ADD98.pdf';
+      // ⚠️ الرابط المطلق من الجذر - يبدأ بـ /
+      var url = '/1a82472a-e2b9-4491b-952d-f6a77700d868/954884-20D8ADD98.pdf';
       var win = window.open(url, '_blank');
       if (!win) { window.location.href = url; }
     }
