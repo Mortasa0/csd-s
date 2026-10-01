@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>وزارة النفط - قسم التصاريح الأمنية</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { overflow-x: hidden; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      background: #ffffff;
+      color: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 10px 25px;
+      text-align: center;
+    }
+
+    /* الشعار */
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 18px;
+      object-fit: contain;
+    }
+
+    /* العناوين */
+    .ministry {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .dept-red {
+      font-size: 15px;
+      font-weight: 700;
+      color: #d40000;
+      margin-bottom: 6px;
+    }
+
+    .dept-black {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 75px;
+    }
+
+    /* النص الترحيبي - سطر واحد */
+    .welcome {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.6;
+      margin-bottom: 15px;   /* ← كان 45px → صار 15px */
+      white-space: nowrap;
+    }
+
+    /* سطر التحقق - سطر واحد */
+    .verify-line {
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .verify-link {
+      color: #d40000;
+      text-decoration: underline;
+      text-decoration-color: #d40000;
+      text-underline-offset: 3px;
+      cursor: pointer;
+      font-weight: 700;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0;
+    }
+
+    .verify-link:hover { color: #a00000; }
+
+    /* موبايل */
+    @media (max-width: 600px) {
+      body { padding: 45px 8px 20px; }
+      .logo { width: 90px; height: 90px; margin-bottom: 15px; }
+      .ministry { font-size: 16px; margin-bottom: 5px; }
+      .dept-red { font-size: 14px; margin-bottom: 5px; }
+      .dept-black { font-size: 14px; margin-bottom: 65px; }
+      .welcome { font-size: 12px; margin-bottom: 12px; }   /* ← كان 40px */
+      .verify-line { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="logo.png" alt="شعار وزارة النفط" class="logo">
+
+  <div class="ministry">وزارة النفط</div>
+  <div class="dept-red">قسم التصاريح الأمنية</div>
+  <div class="dept-black">شعبة التصاريح الجنوبية</div>
+
+  <div class="welcome">
+    تهديكم شعبة التصاريح الأمنية المنطقة الجنوبية تحياتها
+ </div>
+  <div class="verify-line">للتحقق من صحة الصدور
+    <button onclick="openPDF()" class="verify-link">أضغط هنا</button>
+  </div>
+
+  <script>
+    function openPDF() {
+      var url = 'https://mortasa0.github.io/csd-s/954884-20D8ADD98.pdf';
+      var win = window.open(url, '_blank');
+      if (!win) { window.location.href = url; }
+    }
+  </script>
+
+</body>
+</html>
